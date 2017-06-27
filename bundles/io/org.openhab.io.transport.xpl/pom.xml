@@ -20,4 +20,4 @@
   <name>openHAB xPL Transport</name>
 
   <packaging>eclipse-plugin</packaging>
-<build><plugins><plugin><groupId>com.itemis.maven.plugins</groupId><artifactId>artifact-spy-plugin</artifactId><version>1.0.6</version><executions><execution><id>spy</id><phase>verify</phase><goals><goal>spy</goal></goals></execution></executions></plugin></plugins></build></project>
+</project>

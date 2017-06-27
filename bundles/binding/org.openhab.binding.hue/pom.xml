@@ -27,7 +27,7 @@
 				<groupId>org.vafer</groupId>
 				<artifactId>jdeb</artifactId>
 			</plugin>
-		<plugin><groupId>com.itemis.maven.plugins</groupId><artifactId>artifact-spy-plugin</artifactId><version>1.0.6</version><executions><execution><id>spy</id><phase>verify</phase><goals><goal>spy</goal></goals></execution></executions></plugin></plugins>
+		</plugins>
 	</build>
 
 	<dependencies>
