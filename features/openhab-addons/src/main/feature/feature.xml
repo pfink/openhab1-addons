@@ -11,8 +11,6 @@
 -->
 <features name="${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
 
-  <repository>mvn:de.maggu2810.kat.features/apache-httpcomponents/${kat.version}/xml/features</repository>
-
   <!-- action -->
 
   <feature name="openhab-action-ecobee" description="Ecobee Action" version="${project.version}">
@@ -327,6 +325,14 @@
     <configfile finalname="${openhab.conf}/services/http.cfg" override="false">mvn:${project.groupId}/openhab-addons-external/${project.version}/cfg/http</configfile>
   </feature>
 
+  <feature name="openhab-binding-iec6205621meter" description="IEC 62056-21 Meter" version="${project.version}">
+    <feature>openhab-runtime-base</feature>
+    <feature>openhab-runtime-compat1x</feature>
+    <feature>openhab-transport-serial</feature>
+    <bundle start-level="80">mvn:org.openhab.binding/org.openhab.binding.iec6205621meter/${project.version}</bundle>
+    <configfile finalname="${openhab.conf}/services/iec6205621meter.cfg" override="false">mvn:${project.groupId}/openhab-addons-external/${project.version}/cfg/iec6205621meter</configfile>
+  </feature>
+
   <feature name="openhab-binding-ihc1" description="IHC Binding" version="${project.version}">
     <feature>openhab-runtime-base</feature>
     <feature>openhab-runtime-compat1x</feature>
@@ -406,18 +412,19 @@
     <configfile finalname="${openhab.conf}/services/lgtv.cfg" override="false">mvn:${project.groupId}/openhab-addons-external/${project.version}/cfg/lgtv</configfile>
   </feature>
 
+  <feature name="openhab-binding-maxcul1" description="MAX! CUL Binding" version="${project.version}">
+    <feature>openhab-runtime-base</feature>
+    <feature>openhab-runtime-compat1x</feature>      
+    <feature>openhab-transport-cul1</feature>
+    <bundle start-level="80">mvn:org.openhab.binding/org.openhab.binding.maxcul/${project.version}</bundle>
+    <configfile finalname="${openhab.conf}/services/maxcul.cfg" override="false">mvn:${project.groupId}/openhab-addons-external/${project.version}/cfg/maxcul</configfile>
+  </feature>
+
   <feature name="openhab-binding-mochadx101" description="MochadX10 Binding" version="${project.version}">
     <feature>openhab-runtime-base</feature>
     <feature>openhab-runtime-compat1x</feature>
     <bundle start-level="80">mvn:org.openhab.binding/org.openhab.binding.mochadx10/${project.version}</bundle>
     <configfile finalname="${openhab.conf}/services/mochadx10.cfg" override="false">mvn:${project.groupId}/openhab-addons-external/${project.version}/cfg/mochadx10</configfile>
-  </feature>
-
-  <feature name="openhab-binding-milight1" description="Milight Binding" version="${project.version}">
-    <feature>openhab-runtime-base</feature>
-    <feature>openhab-runtime-compat1x</feature>
-    <bundle start-level="80">mvn:org.openhab.binding/org.openhab.binding.milight/${project.version}</bundle>
-    <configfile finalname="${openhab.conf}/services/milight.cfg" override="false">mvn:${project.groupId}/openhab-addons-external/${project.version}/cfg/milight</configfile>
   </feature>
 
   <feature name="openhab-binding-mios1" description="MiOS Binding" version="${project.version}">
