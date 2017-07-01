@@ -5,7 +5,7 @@ checkDependencies
 checkPlugins
 checkPluginDependencies
 prepareVersions
-checkAether
+#checkAether
 setReleaseVersions
 addSpyPlugin
 #buildReleaseArtifacts
